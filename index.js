@@ -1,9 +1,8 @@
 
 window.onscroll = function() {
     var t = document.documentElement.scrollTop || document.body.scrollTop;
-    console.log('scroll,', t);
     var header = document.getElementById("header");
-    if( t >= 76 ) { 
+    if( t >= 76 ) {
         header.style.background = "#fff"; 
         header.style.position = "fixed";
         header.style.color = "#000";
@@ -231,7 +230,6 @@ function setFan() {
 
 document.querySelector('.menus').addEventListener('click', function(e) {
     var info = e.target.getAttribute('data-info')
-    console.log(666, info)
     if (info.indexOf('#') >= 0) {
         scrollTo(info)
     } else if (info === 'fan') {
