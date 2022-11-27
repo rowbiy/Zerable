@@ -157,8 +157,7 @@ function setEN() {
     document.querySelector('.menus').children[4].innerText = 'Contact';
     document.querySelector('.menus').children[5].innerText = 'ZN';
     document.querySelector('.menus').children[5].setAttribute('data-info', 'jian');
-    
-    console.log(document.querySelector('.menus').children[6])
+    // console.log(document.querySelector('.menus').children[6])
     document.querySelector('.menus').children[6].remove();
 }
 
@@ -230,7 +229,7 @@ function setFan() {
 
 document.querySelector('.menus').addEventListener('click', function(e) {
     var info = e.target.getAttribute('data-info')
-    if (info.indexOf('#') >= 0) {
+    if (info && info.indexOf('#') >= 0) {
         scrollTo(info)
     } else if (info === 'fan') {
         setFan();
@@ -259,7 +258,7 @@ var top2Text_E = 'Empower On-chain Regulation,\n Deliver Contextualized and Insi
 
 var serviceTitleText = '服务'
 var serviceTitleText_F = '服務'
-var serviceTitleText_E = 'Service'
+var serviceTitleText_E = 'Services'
 
 var service1Text = '可疑虚拟货币交易分析'
 var service1Text_F = '可疑虛擬貨幣交易分析'
