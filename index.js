@@ -33,7 +33,6 @@ function setJian() {
     document.querySelector('.products-title').innerText = productTitleText;
 
     document.querySelector('.product-1').children[1].innerHTML = product1Text;
-    document.querySelector('.product-1').children[2].style.marginLeft = '20px';
     document.querySelector('.product-1').children[2].innerHTML = '';
     for(let s of product1DetailTexts) {
         const p = document.createElement('p');
@@ -155,7 +154,7 @@ function setEN() {
     document.querySelector('.menus').children[2].innerText = 'Products';
     document.querySelector('.menus').children[3].innerText = 'About Us';
     document.querySelector('.menus').children[4].innerText = 'Contact';
-    document.querySelector('.menus').children[5].innerText = 'ZN';
+    document.querySelector('.menus').children[5].innerText = 'CN';
     document.querySelector('.menus').children[5].setAttribute('data-info', 'jian');
     // console.log(document.querySelector('.menus').children[6])
     document.querySelector('.menus').children[6].remove();
@@ -175,7 +174,6 @@ function setFan() {
     document.querySelector('.products-title').innerText = productTitleText_F;
 
     document.querySelector('.product-1').children[1].innerHTML = product1Text_F;
-    document.querySelector('.product-1').children[2].style.marginLeft = '20px';
     document.querySelector('.product-1').children[2].innerHTML = '';
     for(let s of product1DetailTexts_F) {
         const p = document.createElement('p');
@@ -248,8 +246,8 @@ function scrollTo(id) {
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
 }
 
-var top1Text = '赋能虚拟货币的 合规化应用';
-var top1Text_F = '賦能虛擬貨幣的合規化應用';
+var top1Text = '赋能虚拟货币的\n合规化应用';
+var top1Text_F = '賦能虛擬貨幣的\n合規化應用';
 var top1Text_E = 'Web3\n of KYT & AML';
 
 var top2Text = '掌握链上监管，提供情景化和有洞察的分析';

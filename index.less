@@ -74,7 +74,7 @@
         }
         div{
             color: #fff;
-            width: 320px;
+            width: calc(538 / 1920 * 100vw);
             &:first-child{
                 height: 160px;
                 font-size: 42px;
@@ -96,7 +96,7 @@
         position: relative;
         background-color: #fff;
         padding-top: calc(100vw / 1.77777 * 65 / 720);
-        height: calc(440 / 1280 * 100vw);
+        height: calc(850 / 1920 * 100vw);
         .service-title{
             font-size: 36px;
             font-weight: 600;
@@ -109,36 +109,29 @@
             padding-top: calc(100vw / 1.77777 * 92 / 720);
             font-size: 14px;
             font-family: miSL;
+            img{
+                width: calc(220 / 1920 * 100vw);
+                margin-bottom: calc(56 / 1920 * 100vw);
+            }
             div{
                 position: absolute;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                left: 50%;
+                text-align: center;
             }
             .service-1{
-                width: calc(208 / 1280 * 100vw);
-                transform: translateX(-400px);
-                img{
-                    width: 116px;
-                    margin-bottom: 48px;
-                }
+                width: calc(330 / 1920 * 100vw);
+                left: calc(326 / 1920 * 100vw);
             }
             .service-2{
-                width: calc(192 / 1280 * 100vw);
+                left: 50%;
+                width: calc(310 / 1920 * 100vw);
                 transform: translateX(-50%);
-                img{
-                    width: 128px;
-                    margin-bottom: 60px;
-                }
             }
             .service-3{
-                width: calc(272 / 1280 * 100vw);
-                transform: translateX(150px);
-                img{
-                    width: 111px;
-                    margin-bottom: 40px;
-                }
+                width: calc(400 / 1920 * 100vw);
+                right: calc(256 / 1920 * 100vw);
             }
         }
         #product{
@@ -152,7 +145,7 @@
     .products{
         padding-top: calc(100vw / 1.77777 * 80 / 720);
         padding-bottom: calc(100vw / 1.77777 * 45 / 720);
-        height: calc(100vw / 1.77777 * 1092 / 720);
+        height: calc(1662 / 1920 * 100vw);
         background-color: #F5F6F8;
         position: relative;
         .products-title{
@@ -180,47 +173,50 @@
                 left: calc(129 / 1280 * 100vw);
                 position: absolute;
                 img{
-                    width: calc(100vw * 267 / 1280);
-                    margin-bottom: 15px;
+                    width: calc(475 / 1920 * 100vw);
+                    margin-bottom: calc(44 / 1920 * 100vw);
                 }
                 .product-title{
-                    text-align: center;
+                    padding-left: calc(30 / 1920 * 100vw);
                 }
                 .product-desc{
-                    margin-left: 20px;
+                    padding-left: calc(30 / 1920 * 100vw);
                 }
             }
             .product-2{
                 left: calc(648 / 1280 * 100vw);
-                top: 220px;
+                top: calc(335 / 1920 * 100vw);
                 position: absolute;
                 img{
-                    width: calc(100vw * 272 / 1280);
-                    margin-top: 65px;
-                    padding-bottom: 20px;
+                    width: calc(475 / 1920 * 100vw);
+                    margin-top: calc(92 / 1920 * 100vw);
+                }
+                .product-title{
+                    padding-left: calc(45 / 1920 * 100vw);
+                }
+                .product-desc{
+                    padding-left: calc(45 / 1920 * 100vw);
                 }
                 
             }
             .product-3{
-                left: calc(150 / 1280 * 100vw);
-                top: calc(100vw / 1.77777 * 720 / 720);
+                left: calc(240 / 1920 * 100vw);
+                top: calc(1084 / 1920 * 100vw);
                 position: absolute;
                 img{
-                    width: calc(100vw * 371 / 1280);
-                    margin-top: 65px;
-                    padding-bottom: 20px;
+                    width: calc(475 / 1920 * 100vw);
                 }
                 .product-title{
                     position: absolute;
-                    left: calc(510 / 1280 * 100vw);
-                    top: calc(100vw / 1.77777 * 110 / 720);
-                    width: 440px;
+                    left: calc((273 + 475) / 1920 * 100vw);
+                    top: calc(124 / 1920 * 100vw);
+                    width: calc(662 / 1920 * 100vw);
                 }
                 .product-desc{
                     position: absolute;
-                    left: calc(510 / 1280 * 100vw);
-                    top: calc(100vw / 1.77777 * 170 / 720);
-                    width: 440px;
+                    left: calc((273 + 475) / 1920 * 100vw);
+                    top: calc(184 / 1920 * 100vw);
+                    width: calc(662 / 1920 * 100vw);
                 }
             }
         }
@@ -236,6 +232,7 @@
         background-color: #fff;
         display: flex;
         align-items: center;
+        height: calc(853 / 1920 * 100vw);
         img{
             width: calc(561 / 1280 * 100vw);
         }
@@ -268,20 +265,19 @@
             width: calc(257 / 1280 * 100vw);
             height: calc(257 / 1280 * 100vw * 250 / 257);
             background: url('./imgs/my-advantage-bg.png') 0 0 / 100% auto no-repeat;
+            text-align: center;
             p{
                 color: #000000;
                 font-size: 36px;
                 font-weight: 600;
-                margin-left: calc(54 / 1280 * 100vw);
                 font-family: miSD;
-                width: 400px;
                 padding-top: calc(50 / 1280 * 100vw * 250 / 257);
             }
         }
         .my-advantage-right{
             margin-left: calc(177 / 1280 * 100vw);
             .my-item{
-                width: calc(535 / 1280 * 100vw);
+                width: calc(750 / 1920 * 100vw);
                 height: calc(113 / 1280 * 100vw);
                 background: #fff;
                 border-radius: 13px;
@@ -293,10 +289,12 @@
                 align-items: center;
                 color: #000000;
                 cursor: pointer;
+                font-size: 12px;
                 .img{
                     width: calc(42 / 1280 * 100vw);
                     height: calc(42 / 1280 * 100vw);
                     margin-right: calc(21 / 1280 * 100vw);
+                    flex-shrink: 0;
                 }
                 .my-item-1{
                     background: url('./imgs/adv-1.png') 0 0 / 100% auto no-repeat;
