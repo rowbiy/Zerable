@@ -217,7 +217,7 @@ function setFan() {
     menus[2].innerText = '產品';
     menus[3].innerText = '关於我們';
     menus[4].innerText = '聯系我們';
-    menus[5].children[0].innerText = '中文（簡體）';
+    menus[5].children[0].innerText = '中文（繁體）';
 }
 
 document.querySelector('.menus').addEventListener('click', function(e) {
