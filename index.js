@@ -8,6 +8,7 @@ window.onscroll = function() {
         header.style.color = "#000";
         header.children[0].children[0].style.display = 'none'
         header.children[0].children[1].style.display = 'block'
+        header.children[1].children[5].children[1].classList.add('fixed-ang');
         header.style.boxShadow = '0px 1px 20px 0px rgba(198,198,198,0.3)';
     } else { 
         header.style.position = "absolute"; 
@@ -15,6 +16,7 @@ window.onscroll = function() {
         header.style.color = "#fff";
         header.children[0].children[0].style.display = 'block'
         header.children[0].children[1].style.display = 'none'
+        header.children[1].children[5].children[1].classList.remove('fixed-ang');
         header.style.boxShadow = 'none';
     }
   }
@@ -76,20 +78,13 @@ function setJian() {
     document.querySelector('.contact-us-text').innerHTML = contactUs;
     
     // 菜单
-    document.querySelector('.menus').children[0].innerText = '首页';
-    document.querySelector('.menus').children[1].innerText = '服务';
-    document.querySelector('.menus').children[2].innerText = '产品';
-    document.querySelector('.menus').children[3].innerText = '关于我们';
-    document.querySelector('.menus').children[4].innerText = '联系我们';
-    document.querySelector('.menus').children[5].innerText = '繁体';
-    document.querySelector('.menus').children[5].setAttribute('data-info', 'fan');
-    if (!document.querySelector('.menus').children[6]) {
-        var en = document.createElement('div')
-        en.className = 'menu';
-        en.setAttribute('data-info', 'en');
-        en.innerText = 'EN';
-        document.querySelector('.menus').appendChild(en);
-    }
+    var menus = Array.from(document.querySelector('.menus').children);
+    menus[0].innerText = '首页';
+    menus[1].innerText = '服务';
+    menus[2].innerText = '产品';
+    menus[3].innerText = '关于我们';
+    menus[4].innerText = '联系我们';
+    menus[5].children[0].innerText = '中文（简体）';
 }
 
 function setEN() {
@@ -148,16 +143,15 @@ function setEN() {
 
     // 联系我们
     document.querySelector('.contact-us-text').innerHTML = contactUs_E;
+
     // 菜单
-    document.querySelector('.menus').children[0].innerText = 'Home';
-    document.querySelector('.menus').children[1].innerText = 'Services';
-    document.querySelector('.menus').children[2].innerText = 'Products';
-    document.querySelector('.menus').children[3].innerText = 'About Us';
-    document.querySelector('.menus').children[4].innerText = 'Contact';
-    document.querySelector('.menus').children[5].innerText = 'CN';
-    document.querySelector('.menus').children[5].setAttribute('data-info', 'jian');
-    // console.log(document.querySelector('.menus').children[6])
-    document.querySelector('.menus').children[6].remove();
+    var menus = Array.from(document.querySelector('.menus').children);
+    menus[0].innerText = 'Home';
+    menus[1].innerText = 'Services';
+    menus[2].innerText = 'Products';
+    menus[3].innerText = 'About Us';
+    menus[4].innerText = 'Contact';
+    menus[5].children[0].innerText = 'English';
 }
 
 function setFan() {
@@ -215,14 +209,15 @@ function setFan() {
 
     // 联系我们
     document.querySelector('.contact-us-text').innerHTML = contactUs_F;
+
     // 菜单
-    document.querySelector('.menus').children[0].innerText = '首頁';
-    document.querySelector('.menus').children[1].innerText = '服務';
-    document.querySelector('.menus').children[2].innerText = '產品';
-    document.querySelector('.menus').children[3].innerText = '关於我們';
-    document.querySelector('.menus').children[4].innerText = '聯系我們';
-    document.querySelector('.menus').children[5].innerText = '簡體';
-    document.querySelector('.menus').children[5].setAttribute('data-info', 'jian');
+    var menus = Array.from(document.querySelector('.menus').children);
+    menus[0].innerText = '首頁';
+    menus[1].innerText = '服務';
+    menus[2].innerText = '產品';
+    menus[3].innerText = '关於我們';
+    menus[4].innerText = '聯系我們';
+    menus[5].children[0].innerText = '中文（簡體）';
 }
 
 document.querySelector('.menus').addEventListener('click', function(e) {
@@ -241,6 +236,18 @@ document.querySelector('.menus').addEventListener('click', function(e) {
         scrollTo('#view-flag');
     }
 })
+
+document.querySelector('.lan-item').addEventListener('click', function(e) {
+    var info = e.target.getAttribute('data-info')
+    if (info === 'fan') {
+        setFan();
+    } else if (info === 'jian') {
+        setJian();
+    } else if (info === 'en') {
+        setEN();
+    }
+})
+
 
 function scrollTo(id) {
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });

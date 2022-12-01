@@ -47,6 +47,7 @@
             align-items: center;
             justify-content: space-between;
             .menu{
+                position: relative;
                 cursor: pointer;
                 height: 24px;
                 line-height: 24px;
@@ -56,6 +57,64 @@
                 &:hover{
                     font-weight: bold;
                     opacity: 1;
+                }
+                &.lan{
+                    display: flex;
+                    align-items: center;
+                }
+                .triangle{
+                    width: 0;
+                    height: 0;
+                    border: calc(6 / 1920 * 100vw) solid;
+                    border-color: #fff transparent transparent;
+                    transform: translateY(calc(3 / 1920 * 100vw));
+                    margin-left: calc(3 / 1920 * 100vw);
+                    &.fixed-ang{
+                        border-color: #333 transparent transparent;
+                    }
+                }
+                &:last-child:hover{
+                    .triangle{
+                        border-color: transparent transparent #fff;
+                        transform: translateY(calc(-3 / 1920 * 100vw));
+                        &.fixed-ang{
+                            border-color: transparent transparent #333;
+                            transform: translateY(calc(-3 / 1920 * 100vw));
+                        }
+                    }
+                    .pop-layer{
+                        display: block;
+                    }
+                }
+                .pop-layer{
+                    position: absolute;
+                    left: 50%;
+                    width: calc(100 / 1280 * 100vw);
+                    top: calc(18 / 1280 * 100vw);
+                    transform: translateX(-50%;);
+                    display: none;
+                    .pop-layer-container{
+                        background: rgba(255, 255, 255, .9);
+                        padding: calc(16 / 1280 * 100vw);
+                        border-radius: calc(8 / 1280 * 100vw);
+                        box-shadow: 0 25px 50px 0 rgb(0 0 0 / 14%);
+                        color: #666;
+                        .lan-item{
+                            cursor: pointer;
+                            text-align: left;
+                            margin-bottom: calc(5 / 1280 * 100vw);
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+                            &:hover{
+                                color: #000;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                    div:first-child{
+                        height: calc(16 / 1280 * 100vw);
+                    }
                 }
             }
         }
@@ -354,6 +413,18 @@
                 margin-left: calc(20 / 1280 * 100vw);
                 cursor: pointer;
                 background: url('./imgs/email.png') 0 0 / 100% auto no-repeat;
+            }
+            .phone{
+                background-image: url('./imgs/phone.png');
+                &:hover{
+                    background-image: url('./imgs/phone-w.png');
+                }
+            }
+            .wechat{
+                background-image: url('./imgs/wechat.png');
+                &:hover{
+                    background-image: url('./imgs/wechat-w.png');
+                }
             }
             .twitter{
                 background-image: url('./imgs/twitter.png');
